@@ -3,7 +3,6 @@
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { SolutionArt } from "@/components/art/SolutionArt";
 import { useQuoteModal } from "@/components/forms/QuoteModalContext";
 import Image1 from "../../../public/images/solution-panels.jpg"
 import Image2 from "../../../public/images/solution-battery.jpg"
@@ -15,7 +14,6 @@ import Image from "next/image";
 const solutions = [
   {
     id: "panels",
-    art: "panels" as const,
     title: "Solar Panels",
     copy: "Harness the power of the sun and generate clean electricity for your home or business.",
     tags: ["Homes", "Offices", "Shops", "Schools"],
@@ -25,7 +23,6 @@ const solutions = [
   },
   {
     id: "battery",
-    art: "battery" as const,
     title: "Solar Batteries",
     copy: "Store excess solar energy and keep your essential appliances running when the sun goes down.",
     tags: ["Backup power", "Load shedding", "Peace of mind"],
@@ -35,7 +32,6 @@ const solutions = [
   },
   {
     id: "system",
-    art: "system" as const,
     title: "Complete Solar Systems",
     copy: "From panels to batteries and installation, we design complete energy solutions around your needs.",
     tags: ["End-to-end design", "Installation", "Support"],
