@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand colors — derived from the 22 Energy mark */
+  --brand-navy: #0a1628;
+  --brand-navy-2: #142238;
+  --brand-navy-soft: #1c2d47;
+  --brand-gold: #f0ab1f;
+  --brand-gold-dark: #d1900f;
+  --brand-gold-light: #fbd989;
+  --brand-green: #0e7c3a;
+  --brand-green-dark: #0a5e2c;
+  --brand-lime: #9ac93d;
+
+  --background: #ffffff;
+  --background-warm: #faf7f0;
+  --background-muted: #f4f1e9;
+
+  --text-primary: #0a1628;
+  --text-secondary: #566072;
+  --text-muted: #7a8494;
+  --text-on-dark: #f5f4f1;
+  --text-on-dark-muted: #aab3c2;
+
+  --border: #e6e1d6;
+  --border-dark: #2a3a56;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  --shadow-card: 0 1px 2px rgba(10, 22, 40, 0.04), 0 8px 24px -12px rgba(10, 22, 40, 0.12);
+  --shadow-card-hover: 0 4px 8px rgba(10, 22, 40, 0.06), 0 16px 32px -12px rgba(10, 22, 40, 0.18);
+
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --color-navy: var(--brand-navy);
+  --color-navy-2: var(--brand-navy-2);
+  --color-navy-soft: var(--brand-navy-soft);
+  --color-gold: var(--brand-gold);
+  --color-gold-dark: var(--brand-gold-dark);
+  --color-gold-light: var(--brand-gold-light);
+  --color-green: var(--brand-green);
+  --color-green-dark: var(--brand-green-dark);
+  --color-lime: var(--brand-lime);
+
+  --color-background: var(--background);
+  --color-background-warm: var(--background-warm);
+  --color-background-muted: var(--background-muted);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-on-dark: var(--text-on-dark);
+  --color-text-on-dark-muted: var(--text-on-dark-muted);
+
+  --color-border: var(--border);
+  --color-border-dark: var(--border-dark);
+
+  --font-sans: "Manrope";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Anchor offset so headings don't hide under sticky navbar */
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--brand-gold-light);
+  color: var(--brand-navy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s var(--ease-standard) both;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6px, -8px); }
+}
+
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-drift {
+    animation: none;
+  }
+}
