@@ -34,7 +34,7 @@ export function Hero() {
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % HERO_BACKGROUNDS.length);
-    }, 10000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [isInView]);
@@ -55,7 +55,7 @@ export function Hero() {
           }}
         />
       ))}
-      <div className="relative bg-background-warm/70 h-full flex text-center">
+      <div className="relative bg-background-warm/80 h-full flex text-center">
         <div className="mx-auto flex max-w-[1360px] flex-col-reverse lg:flex-row lg:items-center lg:gap-10">
           <div className="relative z-10 flex flex-1 flex-col justify-center px-5 pb-12 pt-8 sm:px-8 lg:px-10 lg:py-24">
             <h1
