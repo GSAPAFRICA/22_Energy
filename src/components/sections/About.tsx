@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
-import HeroImg from "../../../public/images/hero-solar-home.jpg"
+import HeroImg from "../../../public/images/hybrid_system.jpeg"
 
 export function About() {
   return (
@@ -8,7 +8,7 @@ export function About() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="order-2 overflow-hidden rounded-[6px] lg:order-1 md:h-[500px]">
-            <Image src={HeroImg}  alt="about-img" className="h-full w-full object-cover"/>
+            <Image src={HeroImg}  alt="about-img" className="h-full w-full object-cover object-center scale-150"/>
           </div>
 
           <div className="order-1 lg:order-2">
@@ -24,8 +24,8 @@ export function About() {
               solutions designed to help you generate, store and use your own energy.
             </p>
 
-            <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="rounded-[6px] border border-border bg-background-warm p-5">
+            <div className="mt-6 grid grid-cols-1">
+              <div className=" py-5">
                 <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-green">
                   Our Mission
                 </p>
@@ -33,7 +33,7 @@ export function About() {
                   To make reliable, sustainable energy accessible to everyone.
                 </p>
               </div>
-              <div className="rounded-[6px] border border-border bg-background-warm p-5">
+              <div className=" py-5">
                 <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-gold-dark">
                   Our Vision
                 </p>

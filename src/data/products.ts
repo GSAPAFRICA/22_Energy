@@ -1,9 +1,4 @@
-/**
- * Commercial equipment pricing.
- * These figures are supplied directly by 22 Energy in Naira (₦) — do not
- * convert currency or alter the listed names/prices. Add or remove line
- * items here; the UI renders whatever is in these two arrays.
- */
+
 export type CommercialProduct = {
   id: string;
   name: string;
@@ -88,8 +83,5 @@ export const lithiumBatteries: CommercialProduct[] = [
   },
 ];
 
-// Supplied note: "50KWH & ABOVE +₦5M" — the meaning of this additional figure
-// (install/configuration cost vs. a larger-capacity variant) has not been
-// confirmed, so it is surfaced as a note rather than folded into any price above.
 export const batteryPricingNote =
   "Additional system requirements may affect final pricing. Prices are subject to site requirements, installation and configuration.";

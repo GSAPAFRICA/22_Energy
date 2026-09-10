@@ -1,9 +1,4 @@
-/**
- * Home & business solar packages.
- * `priceDisplay` is an indicative starting figure, not a final quote — actual
- * package prices have not been confirmed yet. Replace the "$XXX" placeholders
- * with real starting prices once available; everything else can stay as-is.
- */
+
 export type Package = {
   id: string;
   name: string;
@@ -18,7 +13,7 @@ export const packages: Package[] = [
   {
     id: "starter",
     name: "Starter",
-    priceDisplay: "From $XXX",
+    priceDisplay: "From ₦350,000- ₦1M",
     description: "For essential home power.",
     includes: ["Solar panels", "Inverter", "Installation", "Basic system setup"],
     cta: "Get Started",
@@ -26,7 +21,7 @@ export const packages: Package[] = [
   {
     id: "home",
     name: "Home",
-    priceDisplay: "From $XXX",
+    priceDisplay: "From ₦3M - ₦10M",
     description: "For comfortable everyday living.",
     includes: [
       "Solar panels",
@@ -41,7 +36,7 @@ export const packages: Package[] = [
   {
     id: "business",
     name: "Business",
-    priceDisplay: "From $XXX",
+    priceDisplay: "From ₦20M - ₦50M",
     description: "Built for businesses that need dependable power.",
     includes: [
       "High-capacity solar panels",

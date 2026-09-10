@@ -4,9 +4,10 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useQuoteModal } from "@/components/forms/QuoteModalContext";
-import Image1 from "../../../public/images/solution-panels.jpg"
-import Image2 from "../../../public/images/solution-battery.jpg"
-import Image3 from "../../../public/images/about-solar-installation.jpg"
+import HeroImg from "../../../public/images/hero-solar-home.jpg"
+import Hybrid from "../../../public/images/hybrid_system2.jpeg"
+import InverterImg from "../../../public/images/inverters.jpeg"
+
 import Image from "next/image";
 
 
@@ -19,7 +20,7 @@ const solutions = [
     tags: ["Homes", "Offices", "Shops", "Schools"],
     cta: "Learn More",
     dark: false,
-    image:Image1
+    image:HeroImg
   },
   {
     id: "battery",
@@ -28,7 +29,7 @@ const solutions = [
     tags: ["Backup power", "Load shedding", "Peace of mind"],
     cta: "Learn More",
     dark: true,
-    image:Image2
+    image:InverterImg
   },
   {
     id: "system",
@@ -38,7 +39,7 @@ const solutions = [
     cta: "Get a Quote",
     dark: false,
     isQuote: true,
-    image:Image3
+    image:Hybrid
   },
 ];
 
@@ -59,7 +60,7 @@ export function Solutions() {
               }`}
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <Image src={s.image} alt="solution images" />
+                <Image src={s.image} alt="solution images" className=" object-contain" />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <h3 className={`text-[21px] font-bold ${s.dark ? "text-white" : "text-navy"}`}>

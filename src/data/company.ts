@@ -1,8 +1,4 @@
-/**
- * Central company configuration.
- * Replace the placeholder contact values with real 22 Energy details
- * before launch — every "Call/WhatsApp/Email" action on the site reads from here.
- */
+
 export const company = {
   name: "22 Energy",
   legalName: "22 Energy",
@@ -10,17 +6,12 @@ export const company = {
   description:
     "22 Energy provides reliable solar panels, battery storage and complete solar power systems for homes, businesses and communities.",
   contact: {
-    // TODO: replace with the real business phone number, e.g. "+2348012345678"
-    phone: "+000-000-0000",
-    // TODO: replace with the real WhatsApp number in international format, digits only, e.g. "2348012345678"
-    whatsapp: "000000000000",
-    // TODO: replace with the real business email
-    email: "hello@22energy.example",
-    // TODO: fill in the real office address once confirmed
-    address: "Lagos, Nigeria",
+    phone: "+234 916 006 5025",
+    whatsapp: "+2349160065025",
+    email: "marketing@22energy.org",
+    address: "No 1, Ibidoja plaza, directly opposite wema bank,st Patrick bus stop,Alaba international market",
   },
   social: {
-    // TODO: add real social profile URLs here once available. Leave empty to hide the link.
     instagram: "",
     facebook: "",
     linkedin: "",
