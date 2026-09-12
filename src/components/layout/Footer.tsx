@@ -93,6 +93,9 @@ export function Footer() {
                   {company.contact.email}
                 </a>
               </li>
+              <li className="text-[14.5px] text-text-on-dark-muted transition-colors hover:text-gold">
+                  {company.contact.address}
+              </li>
             </ul>
           </div>
         </div>
