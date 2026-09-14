@@ -1,0 +1,8 @@
+# Safe local-only Turnstile test secret. Never use a production secret here.
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+TURNSTILE_ALLOWED_HOSTNAMES=localhost,127.0.0.1
+
+# This must match both occurrences of destination_address/QUOTE_EMAIL_TO in
+# wrangler.jsonc. Wrangler's local email binding logs the message and does not
+# deliver it unless you deliberately set remote: true (do not do that for tests).
+QUOTE_EMAIL_TO=22energyorg@gmail.com
